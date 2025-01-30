@@ -6,7 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="MULBURN - Pragmatic Technology">
     <meta name="author" content="tjblackburn">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+
     <title>MULBURN - Pragmatic Technology</title>
+
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
@@ -18,30 +24,28 @@
             color: #333;
         }
 
-      	header {
-            background: #333;
-            color: #fff;
-            padding: 1rem 0;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 1rem;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2rem;
-            font-weight: 700;
-            text-align: center;
-            flex-grow: 1;
-        }
-
-        header img {
-            height: 3rem;
-            width: auto;
-            float: left;
-	    margin: 800 auto;
-        }
+    header {
+        background: #333;
+        color: #fff;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        max-width: 800px;  /* Match main content width */
+        margin: 0 auto;    /* Center the header container */
+    }
+    header img {
+        height: 2rem;
+        width: auto;
+        /* Remove margin-right: auto */
+    }
+    header h1 {
+        margin: 0;
+        font-size: 2rem;
+        font-weight: 700;
+        text-align: center;
+        flex-grow: 1;      /* This makes the h1 take up remaining space */
+        margin-right: 2rem; /* This offsets the logo width to keep text centered */
+    }
 
         main {
             padding: 2rem;
@@ -77,8 +81,8 @@
 <body>
     <header>
         <h1>
-		<img src="mulburn-removebg-white.png" alt="Mulburn">
-		3 Welcome to Mulburn Technology</h1>
+		<img src="mulburn-removebg-white.png" alt="Mulburn" width="32" height="32">
+		Welcome to Mulburn Technology</h1>
     </header>
     <main>
         <h2>About Mulburn</h2>
